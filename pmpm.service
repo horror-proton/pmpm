@@ -1,0 +1,10 @@
+[Unit]
+Description=A poor man's power manager
+Conflicts=shutdown.target sleep.target
+Before=shutdown.target sleep.target
+
+[Service]
+ExecStart=/usr/lib/pmpm/daemon.sh
+
+[Install]
+WantedBy=multi-user.target
